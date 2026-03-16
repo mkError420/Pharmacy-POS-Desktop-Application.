@@ -44,15 +44,15 @@ CREATE INDEX IF NOT EXISTS idx_sales_date ON sales(date);
 CREATE INDEX IF NOT EXISTS idx_sale_items_sale_id ON sale_items(sale_id);
 CREATE INDEX IF NOT EXISTS idx_sale_items_product_id ON sale_items(product_id);
 
--- Insert sample data
-INSERT OR IGNORE INTO products (name, generic_name, company, buy_price, sell_price, stock, expiry_date, barcode) VALUES
-('Paracetamol 500mg', 'Paracetamol', 'Square Pharma', 2.50, 3.00, 100, '2025-12-31', '1234567890'),
-('Napa 500mg', 'Paracetamol', 'Beximco Pharma', 3.00, 3.50, 80, '2025-11-30', '1234567891'),
-('Amoxicillin 500mg', 'Amoxicillin', 'Incepta Pharma', 8.00, 10.00, 50, '2025-06-30', '1234567892'),
-('Omeprazole 20mg', 'Omeprazole', 'ACI Pharma', 12.00, 15.00, 30, '2025-08-31', '1234567893'),
-('Azithromycin 250mg', 'Azithromycin', 'Square Pharma', 25.00, 30.00, 20, '2025-09-30', '1234567894'),
-('Ibuprofen 400mg', 'Ibuprofen', 'Renata Pharma', 4.00, 5.00, 60, '2025-10-31', '1234567895'),
-('Cetirizine 10mg', 'Cetirizine', 'Beximco Pharma', 6.00, 7.50, 45, '2025-07-31', '1234567896'),
-('Metformin 500mg', 'Metformin', 'Square Pharma', 5.00, 6.00, 70, '2025-12-15', '1234567897'),
-('Amlodipine 5mg', 'Amlodipine', 'Incepta Pharma', 15.00, 18.00, 25, '2025-11-15', '1234567898'),
-('Atorvastatin 10mg', 'Atorvastatin', 'ACI Pharma', 20.00, 25.00, 35, '2025-10-15', '1234567899');
+-- Insert Sample medicines data
+INSERT INTO products (name, generic_name, company, buy_price, sell_price, stock, expiry_date, barcode) VALUES
+('Paracetamol 500mg', 'Acetaminophen', 'Square Pharma', 5.00, 8.00, 100, '2024-12-31', '1234567890123'),
+('Napa 500mg', 'Acetaminophen', 'Beximco Pharma', 5.50, 9.00, 75, '2024-10-15', '2345678901234'),
+('Amoxicillin 500mg', 'Amoxicillin', 'Incepta Pharma', 12.00, 18.00, 50, '2024-08-20', '3456789012345'),
+('Omeprazole 20mg', 'Omeprazole', 'ACI Pharma', 15.00, 25.00, 60, '2024-11-30', '4567890123456'),
+('Azithromycin 250mg', 'Azithromycin', 'Square Pharma', 25.00, 40.00, 30, '2024-09-10', '5678901234567'),
+('Ibuprofen 400mg', 'Ibuprofen', 'Renata Pharma', 8.00, 12.00, 80, '2024-07-25', '6789012345678'),
+('Cetirizine 10mg', 'Cetirizine', 'Beximco Pharma', 6.00, 10.00, 90, '2024-06-15', '7890123456789'),
+('Metformin 500mg', 'Metformin', 'Square Pharma', 4.00, 7.00, 120, '2024-12-01', '8901234567890'),
+('Amlodipine 5mg', 'Amlodipine', 'Incepta Pharma', 18.00, 30.00, 40, '2024-08-05', '9012345678901'),
+('Atorvastatin 10mg', 'Atorvastatin', 'ACI Pharma', 22.00, 35.00, 55, '2024-10-20', '0123456789012');

@@ -41,10 +41,11 @@ class PDFService {
     };
 
     const formatPrice = (price) => {
-      return new Intl.NumberFormat('en-US', {
+      return new Intl.NumberFormat('en-BD', {
         style: 'currency',
-        currency: 'USD'
-      }).format(price);
+        currency: 'BDT',
+        minimumFractionDigits: 2
+      }).format(price).replace('BDT', '৳');
     };
 
     const itemsRows = saleDetails.map(item => `
@@ -225,10 +226,11 @@ class PDFService {
 
   createSalesReportHTML(salesData, reportTitle, dateRange) {
     const formatPrice = (price) => {
-      return new Intl.NumberFormat('en-US', {
+      return new Intl.NumberFormat('en-BD', {
         style: 'currency',
-        currency: 'USD'
-      }).format(price);
+        currency: 'BDT',
+        minimumFractionDigits: 2
+      }).format(price).replace('BDT', '৳');
     };
 
     const formatDate = (dateString) => {
