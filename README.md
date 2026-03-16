@@ -37,34 +37,57 @@ A comprehensive offline Pharmacy Point of Sale (POS) system built with Electron,
 - **Database**: SQLite (local, offline)
 - **Build Tool**: Electron Builder for Windows installer
 
-## Installation & Setup
+## 🚀 Installation on Other PCs
 
-### Prerequisites
-- Node.js (version 14 or higher)
-- npm or yarn package manager
+### **Method 1: Easy Installation (Recommended)**
 
-### Install Dependencies
-```bash
-npm install
-```
+1. **Copy the entire project folder** to the new PC
+2. **Double-click `INSTALL.bat`** - Automatic installation!
+3. **Use desktop shortcut** to run the application
 
-### Development Mode
-```bash
-# Start React development server
-npm start
+### **Method 2: Manual Installation**
 
-# Run Electron in development mode
-npm run electron-dev
-```
+1. **Install Node.js** from https://nodejs.org (LTS version)
+2. **Copy project folder** to the new PC
+3. **Open Command Prompt** in the project folder
+4. **Run:** `npm install`
+5. **Run:** `npm run electron`
 
-### Build Application
-```bash
-# Build React app
-npm run build
+### **Method 3: Quick Run**
 
-# Create Windows installer
-npm run electron-pack
-```
+1. **Copy project folder** to the new PC
+2. **Double-click `RUN.bat`** to start directly
+
+### **📋 What's Included in the Package:**
+- ✅ **INSTALL.bat** - Automatic installation script
+- ✅ **RUN.bat** - Quick launcher
+- ✅ **INSTALLATION_GUIDE.md** - Detailed instructions
+- ✅ **All application files** - Complete source code
+- ✅ **Sample data** - 10 medicines pre-loaded
+- ✅ **Database setup** - Automatic on first run
+
+### **🖥️ System Requirements:**
+- Windows 10/11 (64-bit recommended)
+- Node.js 14+ (download from nodejs.org)
+- 4GB RAM minimum
+- 500MB storage space
+
+### **📱 After Installation:**
+- **Desktop shortcut** for easy access
+- **Start Menu shortcut** for quick launch
+- **Automatic database** creation
+- **Sample medicines** loaded
+- **Ready to use** immediately
+
+### **🔧 Troubleshooting:**
+- **"Node.js not found"** → Install Node.js first
+- **"npm command not found"** → Restart PC after Node.js install
+- **"Dependencies missing"** → Run `npm install`
+- **"Won't start"** → Check `INSTALLATION_GUIDE.md`
+
+---
+
+**The application works completely offline once installed!**
 
 ## Project Structure
 

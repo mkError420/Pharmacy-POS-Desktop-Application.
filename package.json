@@ -4,6 +4,7 @@
   "description": "Complete offline Pharmacy POS desktop application",
   "main": "electron/main.js",
   "homepage": "./",
+  "author": "Pharmacy POS Team",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -11,25 +12,23 @@
     "eject": "react-scripts eject",
     "electron": "electron .",
     "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-pack": "electron-builder",
-    "preelectron-pack": "npm run build"
+    "preelectron-pack": "npm run build",
+    "electron-pack": "electron-builder"
   },
   "dependencies": {
-    "concurrently": "^7.6.0",
-    "electron": "^22.0.0",
-    "electron-builder": "^23.6.0",
-    "html2canvas": "^1.4.1",
-    "jspdf": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
-    "sqlite3": "^5.1.6",
-    "wait-on": "^7.0.1"
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10"
+    "@types/react-dom": "^18.0.10",
+    "concurrently": "^7.6.0",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "wait-on": "^7.0.1"
   },
   "build": {
     "appId": "com.pharmacy.pos",
@@ -40,12 +39,31 @@
     "files": [
       "build/**/*",
       "electron/**/*",
-      "node_modules/**/*"
+      "node_modules/**/*",
+      "database/**/*"
     ],
     "win": {
-      "target": "nsis",
+      "target": {
+        "target": "nsis",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      },
       "icon": "assets/icon.ico"
-    }
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "extraResources": [
+      {
+        "from": "database",
+        "to": "database"
+      }
+    ]
   },
   "browserslist": {
     "production": [
