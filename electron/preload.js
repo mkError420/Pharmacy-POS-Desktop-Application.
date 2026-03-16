@@ -21,6 +21,9 @@ contextBridge.exposeInMainWorld('electronAPI', {
   getDailySalesReport: (date) => ipcRenderer.invoke('get-daily-sales-report', date),
   getMonthlySalesReport: (year, month) => ipcRenderer.invoke('get-monthly-sales-report', year, month),
   
+  // Database operations
+  getDatabaseStatus: () => ipcRenderer.invoke('get-database-status'),
+  
   // Print operation
   printInvoice: (invoiceData) => ipcRenderer.invoke('print-invoice', invoiceData)
 });

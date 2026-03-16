@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import salesService from '../services/salesService.js';
+import DatabaseStatus from '../components/DatabaseStatus';
 import productService from '../services/productService.js';
+import salesService from '../services/salesService.js';
 
 const Dashboard = () => {
   const [todaySales, setTodaySales] = useState([]);
@@ -77,17 +78,11 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="dashboard">
+    <div className="dashboard-page">
+      <DatabaseStatus />
       <div className="dashboard-header">
-        <h1>Pharmacy POS Dashboard</h1>
-        <div className="current-date">
-          {new Date().toLocaleDateString('en-US', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-        </div>
+        <h1>Dashboard</h1>
+        <div className="dashboard-date">{new Date().toLocaleDateString()}</div>
       </div>
 
       {/* Sales Summary Cards */}
