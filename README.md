@@ -252,7 +252,7 @@ The application comes pre-loaded with 10 sample medicines to demonstrate functio
 
 ## License
 
-This project is open-source and available under the MIT License.
+This project is open for every one.
 
 ## Support
 
